@@ -67,10 +67,22 @@ class spider_ahu(object):
 							else:
 								total = total  + '<p>' + contents + '</p>' 
 							filte += 1
-							
-		mail = Mail(target = '282271296@qq.com')  #收件邮箱
-		mail.sendMail(total)
-		
+		cont = ""
+		try:
+			cont = open('total_old.html', 'r').read()
+		except:
+			pass
+		with open('total_old.html', 'w',) as oldfile:
+			if cont != total:
+				print(cont)
+				maillist = ['282271296@qq.com','1542804739@qq.com','gemini0617@qq.com', 'm17775301896@163.com'] 
+				for tar in maillist:
+					mail = Mail(target = tar)  #收件邮箱
+					mail.sendMail(total)	
+			oldfile.write(total)
+				
+
+
 if __name__ == '__main__':
 	process = spider_ahu()
 	#status = process.getsoucepage()
