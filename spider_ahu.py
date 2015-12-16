@@ -75,7 +75,7 @@ class spider_ahu(object):
 		with open('total_old.html', 'w',) as oldfile:
 			if cont != total:
 				print(cont)
-				maillist = ['282271296@qq.com','1542804739@qq.com','gemini0617@qq.com', 'm17775301896@163.com'] 
+				maillist = ['xxx@qq.com','xxx@qq.com','xx7@qq.com', 'xxxxxx96@163.com'] 
 				for tar in maillist:
 					mail = Mail(target = tar)  #收件邮箱
 					mail.sendMail(total)	
