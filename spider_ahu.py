@@ -9,7 +9,7 @@ from Mail import *
 
 class spider_ahu(object):
 	def __init__(self):
-		self.sourcelink = 'http://www.ahu.edu.cn/c/24554/index.shtml'
+		self.sourcelink = 'http://old.ahu.edu.cn/c/24554/index.shtml'
 		self.hosturl = "http://cms.ahu.edu.cn"
 		self.pageSize = "30"
 		self.page = "1"
@@ -48,7 +48,7 @@ class spider_ahu(object):
 			if count > 6:
 				break
 			titleName = mess['title']
-			conlink = "http://www.ahu.edu.cn" + mess['link']
+			conlink = "http://old.ahu.edu.cn" + mess['link']
 			creaTime = mess['createtime']
 			print(conlink)
 			req = request.Request(conlink)
@@ -75,7 +75,7 @@ class spider_ahu(object):
 		with open('total_old.html', 'w',) as oldfile:
 			if cont != total:
 				print(cont)
-				maillist = ['xxx@xxx.com', 'xxxxxx96@xxx.com'] 
+				maillist = ['26@qq.com','1739@qq.com'] 
 				for tar in maillist:
 					mail = Mail(target = tar)  #收件邮箱
 					mail.sendMail(total)	
