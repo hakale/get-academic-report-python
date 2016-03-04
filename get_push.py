@@ -38,7 +38,7 @@ except:
 with open('total_old.html', 'w',) as oldfile:
     if cont != mailtext:
         #print(cont)
-        maillist = ['282271296@qq.com','1542804739@qq.com','gemini0617@qq.com', 'm17775301896@163.com'] #,'1542804739@qq.com','gemini0617@qq.com', 'm17775301896@163.com'
+        maillist = ['xxxx@qq.com','xxx@qq.com','xxxxxxx7@qq.com', 'm177xx75xxxx6@163.com'] 
         for tar in maillist:
             mail = Mail(target = tar)  #收件邮箱
             mail.sendMail(mailtext)	

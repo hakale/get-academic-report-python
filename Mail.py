@@ -10,8 +10,8 @@ from email.utils import parseaddr, formataddr
 import smtplib
 class Mail(object):
 	def __init__(self, target = ""):
-		self.frommail = '2822743310@qq.com'		#发件箱
-		self.frompass = 'ibozzvgziyisdgia'		#邮箱密码
+		self.frommail = 'xxxx@qq.com'		#发件箱
+		self.frompass = 'xxxxxxxxxxxxx'		#邮箱密码
 		self.target = target
 		self.smtp_server = '14.18.245.164'  #'smtp.qq.com'		#邮箱smtp地址
 		
@@ -33,7 +33,7 @@ class Mail(object):
 		return
 
 if __name__ == '__main__':
-	mail = Mail('282271296@qq.com')
+	mail = Mail('xxxxxxx@qq.com')
 	mail.sendMail('this is test')
 	
 	
