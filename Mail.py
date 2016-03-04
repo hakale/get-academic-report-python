@@ -10,10 +10,10 @@ from email.utils import parseaddr, formataddr
 import smtplib
 class Mail(object):
 	def __init__(self, target = ""):
-		self.frommail = 'xxxxxxx@qq.com'		#发件箱
-		self.frompass = 'ibozzxxxxxxxxv'		#邮箱密码
+		self.frommail = '2822743310@qq.com'		#发件箱
+		self.frompass = 'ibozzvgziyisdgia'		#邮箱密码
 		self.target = target
-		self.smtp_server = 'smtp.qq.com'		#邮箱smtp地址
+		self.smtp_server = '14.18.245.164'  #'smtp.qq.com'		#邮箱smtp地址
 		
 	def format_addr(self, s):
 		name,	addr = parseaddr(s)
@@ -33,7 +33,7 @@ class Mail(object):
 		return
 
 if __name__ == '__main__':
-	mail = Mail('2xxxxx6@xx.com')
+	mail = Mail('282271296@qq.com')
 	mail.sendMail('this is test')
 	
 	
